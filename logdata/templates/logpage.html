@@ -1,0 +1,36 @@
+<!-- <h1>hiii </h1>
+<a href="/login"><input type="submit" value="logout"></a><br><br>
+
+<form action="" method="POST">
+
+    {% csrf_token %} 
+
+    <a href="{% url 'changepass' %}"><input type="submit" value="change password"></a>
+
+
+</form>  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>changepass</title>
+</head>
+<body>
+    <h1>hiii </h1>
+
+    <a href="/login"><input type="submit" value="logout"></a><br><br>
+
+    <form action="/changepass/" method="POST">
+
+        {% csrf_token %} 
+    
+        <input type="submit" value="change password">
+    
+    
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!-- {{data.as_p}} -->
+<!-- <a href="/logpage"><input type="submit" value="login"></a> -->
+<!-- <a href="/"><input type="submit" value="signup"></a> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="POST">
+        {% csrf_token %} 
+        {{data.as_p}}
+
+        <!-- <input type="submit" value="sigup"> -->
+
+        <a href="/logpage"><input type="submit" value="login"></a>
+    </form><br><br>
+    <a href="/"><input type="submit" value="signup"></a>
+
+
+    {% if massages %}
+        {% for massage in massages %}
+            <small {% if massages.tags %} class="{{massage.tags}}" {%  endif %} >{{massage}}</small>
+        {% endfor %}
+    {% endif %} 
+
+
+    
+</body>
+</html>
